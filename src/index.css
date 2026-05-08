@@ -1,0 +1,486 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  cursor: default;
+}
+
+body {
+  margin: 0 auto;
+  background: #0d0d1a;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+}
+
+.orb-purple {
+  height: 25rem;
+  width: 25rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(83, 74, 183, 0.35) 0%, transparent 70%);
+  position: absolute;
+  top: -15%;
+  left: -5%;
+  z-index: -1;
+}
+
+
+.orb-green {
+  height: 25rem;
+  width: 25rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 167, 14, 0.35) 0%, transparent 70%);
+  position: absolute;
+  top: 20%;
+  right: 0%;
+  z-index: -1;
+}
+
+.orb-pink {
+  height: 25rem;
+  width: 25rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(161, 0, 137, 0.35) 0%, transparent 70%);
+  position: absolute;
+  top: 70%;
+  right: 40%;
+  z-index: -1;
+}
+
+
+.app {
+  padding: 2rem 3rem;
+}
+
+header {
+  padding-bottom: 2rem;
+  border-bottom: 2px solid rgb(107, 107, 107);
+  margin-bottom: 2rem;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  text-align: center;
+}
+
+.app-logo {
+  height: 5rem;
+  width: 5rem;
+  background: linear-gradient(135deg, rgb(0, 72, 255) 0%, rgb(1, 165, 1) 100%);
+  border-radius: 1rem;
+
+  display: grid;
+  place-content: center;
+}
+
+.app-logo svg {
+  font-size: 3rem;
+  color: whitesmoke;
+}
+
+header h1 {
+  font-size: xx-large;
+  font-weight: 600;
+}
+
+header p {
+  color: rgb(167, 167, 167);
+  font-size: medium;
+  font-weight: 600;
+}
+
+.inputSection {
+  padding: 2rem;
+  margin: 5rem 0;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: 10px;
+  border-radius: 1rem;
+}
+
+.inputSection h2 {
+  font-size: x-large;
+  color: rgb(154, 153, 153);
+  margin-bottom: 1rem;
+}
+
+.inputSection form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.inputSection form .inputContainer {
+  display: flex;
+  gap: 10rem;
+}
+
+.inputSection form .inputContainer label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: rgb(154, 154, 154);
+  font-size: medium;
+  font-weight: 500;
+}
+
+.inputSection form .inputContainer input {
+  width: 150%;
+  padding: 0.8rem 1rem;
+  background: rgb(29, 29, 29);
+  border-radius: 0.5rem;
+  border: 1px solid rgba(159, 159, 159, 0.2);
+  outline: none;
+  color: whitesmoke;
+  cursor: text;
+}
+
+.inputSection form button {
+  padding: 1rem;
+  background: #0d0d1a;
+  border: 2px solid rgba(245, 245, 245, 0.2);
+  outline: none;
+  text-align: center;
+  color: white;
+  font-size: medium;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: background 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.inputSection form button:hover {
+  background: rgb(29, 29, 29);
+}
+
+.student-details {
+  text-align: center;
+}
+
+.list-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+
+.list-info h2 {
+  color: rgb(154, 153, 153);
+  font-size: x-large;
+  font-weight: 700;
+}
+
+.list-info span {
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  color: rgb(120, 0, 248);
+  background: rgba(120, 0, 248, 0.2);
+  border: 1px solid rgba(120, 0, 248, 0.5);
+  font-weight: 500;
+}
+
+.studentCard-Wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.student-card {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: 5px;
+  border: 1px solid rgba(245, 245, 245, 0.2);
+  border-radius: 1rem;
+  box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.18);
+  color: white;
+  text-align: initial;
+  text-transform: capitalize;
+  word-wrap: break-word;
+  transition: all 200ms ease-in-out;
+}
+
+.student-card:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 1px 1px 10px 3px rgba(255, 255, 255, 0.2);
+}
+
+.studentPass-bg {
+  border-left: 5px solid rgb(0, 153, 0);
+}
+
+.studentFail-bg {
+  border-left: 5px solid red;
+}
+
+.student-card h3 {
+  font-size: x-large;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.student-card div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.student-card div p {
+  width: 13rem;
+  font-size: medium;
+  font-weight: 500;
+  color: gray;
+  margin: 0.5rem 0;
+  word-wrap: break-word;
+}
+
+.status {
+  display: flex;
+  justify-content: center;
+}
+
+.status span {
+  display: inline-block;
+  width: fit-content;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border-radius: 1rem;
+  border-radius: 1rem;
+  font-size: small;
+  font-weight: 500;
+}
+
+.status.pass span {
+  background: rgba(0, 192, 0, 0.2);
+  color: rgb(0, 176, 0);
+}
+
+.status.fail span {
+  background: rgba(255, 0, 0, 0.2);
+  color: red;
+}
+
+.btn-del-container {
+  padding: 1rem 0;
+  margin: 0 auto;
+  border-top: 2px solid gray;
+
+  display: flex;
+  justify-content: center;
+}
+
+.btn-del-container button {
+  padding: 0.8rem 1rem;
+  background-color: rgb(207, 1, 1);
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+.btn-del-container button:hover {
+  transform: scale(1.1);
+}
+
+.btn-del-container button:active {
+  transform: scale(1);
+}
+
+.no-records {
+  height: 15rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  color: rgb(148, 148, 148);
+  font-size: x-large;
+  font-weight: 500;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+@media (max-width:65rem) {
+
+  .inputSection{
+    margin: 4rem 0;
+  }
+
+  .inputSection form .inputContainer {
+    display: flex;
+    gap: 5rem;
+  }
+
+  .inputSection form .inputContainer label {
+    margin-bottom: 0.5rem;
+    font-size: small;
+    font-weight: 500;
+  }
+
+  .inputSection form .inputContainer input {
+    width: 130%;
+    padding: 0.8rem 1rem;
+  }
+
+
+  .studentCard-Wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    gap: 1rem;
+  }
+
+  .student-card h3 {
+    font-size: large;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  .student-card div p {
+    width: 8rem;
+  }
+
+}
+
+@media (max-width:50rem) {
+  .orb-purple {
+    height: 15rem;
+    width: 15rem;
+
+    position: absolute;
+    top: -15%;
+    left: -5%;
+    z-index: -1;
+  }
+
+
+  .orb-green {
+    height: 15rem;
+    width: 15rem;
+
+    position: absolute;
+    top: 30%;
+    right: 0%;
+    z-index: -1;
+  }
+
+  .orb-pink {
+    height: 15rem;
+    width: 15rem;
+
+    position: absolute;
+    top: 80%;
+    right: 20%;
+    z-index: -1;
+  }
+
+
+  .app {
+    padding: 2rem 1.5rem;
+  }
+
+  header {
+    padding-bottom: 1rem;
+    gap: 0.5rem;
+
+  }
+
+  .app-logo {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  .app-logo svg {
+    font-size: 2rem;
+  }
+
+  header h1 {
+    font-size: x-large;
+  }
+
+  header p {
+    font-size: small;
+  }
+
+  .inputSection {
+    padding: 1rem;
+    margin: 4rem 0;
+  }
+
+  .inputSection h2 {
+    font-size: large;
+    color: rgb(154, 153, 153);
+    margin-bottom: 1rem;
+  }
+
+  .inputSection form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .inputSection form .inputContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .inputSection form .inputContainer label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: smaller;
+    font-weight: 500;
+  }
+
+
+  .inputSection form .inputContainer input {
+    width: 100%;
+    padding: 0.8rem;
+  }
+
+  .inputSection form button {
+    padding: 0.8rem;
+    font-size: small;
+  }
+
+
+  .list-info h2 {
+    font-size: large;
+  }
+
+  .list-info span {
+    padding: 0.3rem;
+    font-size: small;
+  }
+
+  .studentCard-Wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+
+  .no-records {
+    font-size: large;
+  }
+}
+
+@media (max-width:40rem) {
+  .studentCard-Wrapper {
+    display: grid;
+    grid-template-columns: 450px;
+    gap: 1rem;
+
+    place-content: center;
+  }
+}
+
+@media (max-width:35rem) {
+  .studentCard-Wrapper {
+    display: grid;
+    grid-template-columns: 300px;
+    gap: 1rem;
+  }
+}
