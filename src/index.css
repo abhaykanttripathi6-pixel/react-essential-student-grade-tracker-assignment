@@ -154,6 +154,47 @@ header p {
   background: rgb(29, 29, 29);
 }
 
+.filter-sortingWrapper {
+  margin: 4rem 0;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.filter-sortingWrapper h2 {
+  font-size: x-large;
+  color: gray;
+  margin-bottom: 1rem;
+}
+
+.filter-sortingWrapper .filter-section div{
+  width: fit-content;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: 5px;
+  border-radius: 0.5rem;
+}
+
+.filter-sortingWrapper .filter-section span {
+  display: inline-block;
+  padding: 1rem;
+  color: gray;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+.filter-sortingWrapper .sorting-section select{
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: 5px;
+  border-radius: 0.5rem;
+  color: gray;
+  cursor: pointer;
+}
+
+.filter-sortingWrapper .filter-section .active{
+ background-color: white;
+}
+
 .student-details {
   text-align: center;
 }
@@ -261,31 +302,38 @@ header p {
   color: red;
 }
 
-.btn-del-container {
-  padding: 1rem 0;
-  margin: 0 auto;
+.btn-container {
+  padding: 1rem;
   border-top: 2px solid gray;
 
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
-.btn-del-container button {
+.btn-container button {
   padding: 0.8rem 1rem;
-  background-color: rgb(207, 1, 1);
   border: none;
   outline: none;
   color: white;
   border-radius: 2px;
+
   cursor: pointer;
   transition: all 200ms ease-in-out;
 }
 
-.btn-del-container button:hover {
+.btn-container .del-btn {
+  background-color: rgb(207, 1, 1);
+}
+
+.btn-container .update-btn {
+  background-color: rgb(106, 106, 252);
+}
+
+.btn-container button:hover {
   transform: scale(1.1);
 }
 
-.btn-del-container button:active {
+.btn-container button:active {
   transform: scale(1);
 }
 
@@ -306,7 +354,7 @@ header p {
 
 @media (max-width:65rem) {
 
-  .inputSection{
+  .inputSection {
     margin: 4rem 0;
   }
 
@@ -325,6 +373,13 @@ header p {
     width: 130%;
     padding: 0.8rem 1rem;
   }
+
+  .filter-sortingWrapper {
+  margin: 2rem 0;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
 
 
   .studentCard-Wrapper {
@@ -468,6 +523,37 @@ header p {
 }
 
 @media (max-width:40rem) {
+
+  .filter-sortingWrapper {
+  margin: 2rem 0;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.filter-sortingWrapper h2 {
+  font-size: large;
+  color: gray;
+  margin-bottom: 1rem;
+}
+
+.filter-sortingWrapper .filter-section span {
+  display: inline-block;
+  padding: 0.5rem;
+  color: gray;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+.filter-sortingWrapper .sorting-section select{
+  padding: 0.5rem 0.3rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: 5px;
+  border-radius: 0.5rem;
+  color: gray;
+  cursor: pointer;
+}
+
+
   .studentCard-Wrapper {
     display: grid;
     grid-template-columns: 450px;
