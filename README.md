@@ -1,2 +1,2 @@
 ## Live Deployment Link
-[Click Here](https://studentgradetrackerapp.netlify.app/)
+[Click Here](https://react-essential-student-grade-track.vercel.app/)
