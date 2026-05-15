@@ -168,16 +168,16 @@ class StudentList extends React.Component {
         let filterStudents = this.state.category === 'All' ? this.state.studentItem : this.state.studentItem.filter((student) => student.status === this.state.category)
 
         if (this.state.sort === 'ascending') {
-            filterStudents = filterStudents.sort((a,b) => {
-               return Number(a.grade) - Number(b.grade);
+            filterStudents = filterStudents.sort((a, b) => {
+                return Number(a.grade) - Number(b.grade);
             })
 
 
         }
 
         if (this.state.sort === 'descending') {
-            filterStudents = filterStudents.sort((a,b) => {
-              return  Number(b.grade) - Number(a.grade);
+            filterStudents = filterStudents.sort((a, b) => {
+                return Number(b.grade) - Number(a.grade);
             })
         }
 
@@ -218,7 +218,11 @@ class StudentList extends React.Component {
                         </div>
 
                         {this.state.isUpdate ?
-                            <button type='submit' onClick={this.update}>Update</button>
+                            <div className="update">
+                                <button type='submit' className='btn-update' onClick={this.update}>Update</button>
+                                <button type='cancel' className='btn-cancel'onClick={this.update}>Cancel</button>
+                            </div>
+
                             :
                             <button type='submit' onClick={this.addTask}>+ Add Student</button>
                         }

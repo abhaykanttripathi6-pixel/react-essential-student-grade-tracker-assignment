@@ -136,7 +136,13 @@ header p {
   cursor: text;
 }
 
+.inputSection form .update {
+  display: flex;
+  gap: 4rem;
+}
+
 .inputSection form button {
+  width: 100%;
   padding: 1rem;
   background: #0d0d1a;
   border: 2px solid rgba(245, 245, 245, 0.2);
@@ -167,7 +173,7 @@ header p {
   margin-bottom: 1rem;
 }
 
-.filter-sortingWrapper .filter-section div{
+.filter-sortingWrapper .filter-section div {
   width: fit-content;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: 5px;
@@ -182,7 +188,7 @@ header p {
   border-radius: 0.5rem;
 }
 
-.filter-sortingWrapper .sorting-section select{
+.filter-sortingWrapper .sorting-section select {
   padding: 1rem;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: 5px;
@@ -191,8 +197,8 @@ header p {
   cursor: pointer;
 }
 
-.filter-sortingWrapper .filter-section .active{
- background-color: white;
+.filter-sortingWrapper .filter-section .active {
+  background-color: white;
 }
 
 .student-details {
@@ -375,11 +381,11 @@ header p {
   }
 
   .filter-sortingWrapper {
-  margin: 2rem 0;
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
+    margin: 3rem 0;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
 
 
   .studentCard-Wrapper {
@@ -462,7 +468,7 @@ header p {
 
   .inputSection {
     padding: 1rem;
-    margin: 4rem 0;
+    margin: 3rem 0;
   }
 
   .inputSection h2 {
@@ -496,6 +502,10 @@ header p {
     padding: 0.8rem;
   }
 
+  .inputSection form .update {
+    gap: 2rem;
+  }
+
   .inputSection form button {
     padding: 0.8rem;
     font-size: small;
@@ -525,33 +535,41 @@ header p {
 @media (max-width:40rem) {
 
   .filter-sortingWrapper {
-  margin: 2rem 0;
-  display: flex;
-  gap: 0.5rem;
-}
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
 
-.filter-sortingWrapper h2 {
-  font-size: large;
-  color: gray;
-  margin-bottom: 1rem;
-}
+  .filter-sortingWrapper h2 {
+    font-size: large;
+    color: gray;
+    margin-bottom: 0;
+  }
 
-.filter-sortingWrapper .filter-section span {
-  display: inline-block;
-  padding: 0.5rem;
-  color: gray;
-  cursor: pointer;
-  border-radius: 0.5rem;
-}
+  .filter-sortingWrapper .filter-section span {
+    display: inline-block;
+    padding: 0.5rem 1.4rem;
+    color: gray;
+    cursor: pointer;
+    border-radius: 0.5rem;
+  }
 
-.filter-sortingWrapper .sorting-section select{
-  padding: 0.5rem 0.3rem;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: 5px;
-  border-radius: 0.5rem;
-  color: gray;
-  cursor: pointer;
-}
+  .filter-sortingWrapper .sorting-section select {
+    padding: 0.5rem 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: 5px;
+    border-radius: 0.5rem;
+    color: gray;
+    cursor: pointer;
+  }
+
+  .filter-sortingWrapper .filter-section,
+  .filter-sortingWrapper .sorting-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
 
 
   .studentCard-Wrapper {
